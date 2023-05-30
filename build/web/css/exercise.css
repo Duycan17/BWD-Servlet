@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@200&family=Spectral:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+	 font-family: 'Playfair', serif;
+}
+@font-face {
+	font-family: 'hero-light';
+	src: url('/font/Hero_Light/Hero_Light.otf');
+}
+#abdominals:hover{
+    color: red;
+}
+.signin-btn {
+	background-image: linear-gradient(to right, var(--tw-gradient-stops));
+	--tw-gradient-from: #71d16c;
+	--tw-gradient-to: rgba(113, 209, 108, 0);
+	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+	--tw-gradient-to: #27d38e;
+	--tw-text-opacity: 1;
+	height: 40px;
+	padding: 0 24px;
+	font-family: 'intern';
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 24px;
+	margin: auto 0;
+	position: relative;
+	min-width: 135px;
+	border-radius: 50px;
+	font-family: 'inter';
+}
+
+.signin-btn:active {
+	color: #27d38e;
+}
+.signin-btn > p {
+	margin: auto 0;
+}
+.start-btn > p {
+	margin: auto auto;
+}
+.nav-link{
+	font-size: 2.3vh;
+}
+.navbar{
+	font-family: 'inter';
+	color: #4b5563 !important;
+	font-weight: 500;
+
+}
+.introduce-section
+{
+	padding: 64px 40px;
+	background-color: #E8F0EE;
+}
+.introduce-right
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.introduce-right .introduce-img 
+{
+    width: 100%;
+    overflow: hidden;
+	border-radius:75% 25% 28% 72% / 55% 56% 44% 45% ;
+	transform: translate(40px,-40px);
+	
+}
+.introduce-right .introduce-img img
+{
+    max-width: 100%;
+	
+    object-fit: cover;
+}
+
+.introduce-inf .introduce-title
+{
+	color: #104E4A	;
+	font-size: 5em;
+	font-weight: 700;
+	line-height: 1.2em;
+	padding-bottom: 40px;
+	max-width: 90%;
+}
+.introduce-inf .introduce-sub-title
+{
+	color: #104E4A	;
+	font-size: 1.2em;
+	line-height: 1.4;
+	padding-bottom: 24px;
+	font-family: 'hero-light';
+}
+.btn-exploring {
+	padding: 12.5px 70px;
+	border: 0;
+	border-radius: 100px;
+	background-color: #104E4A;
+	color: #ffffff;
+	font-weight: Bold;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	
+  }
+  
+  .btn-exploring:hover {
+	background-color: #4b8d7c;
+	box-shadow: 0 0 20px #6fc5ff50;
+	transform: scale(1.1);
+  }
+  
+  .btn-exploring:active {
+	background-color: #18713d;
+	transition: all 0.25s;
+	-webkit-transition: all 0.25s;
+	box-shadow: none;
+	transform: scale(0.98);
+  }
+  @media screen and (max-width: 1199px) {
+	.introduce-right .introduce-img 
+{
+   
+	transform: none;
+	margin-top: 50px;
+}
+.introduce-right 
+{	
+	margin-top: 50px;
+}
+ }
+
+
+  /* .action-section */
+
+  .action-section
+{
+	padding: 64px 40px;
+	
+}
+.action-section .action-content
+{
+	text-align: center;
+}
+.action-content .action-title
+{
+	color: #104E4A	;
+	font-size: 5em;
+	font-weight: 700;
+	line-height: 1.2em;
+	padding-bottom: 32px;
+   
+}
+.action-content .action-sub-title
+{
+	color: #104E4A	;
+	font-size: 1.4em;
+	line-height: 1.4;
+	padding-bottom: 24px;
+	font-family: 'hero-light';
+	max-width: 70%;
+	margin: 0px auto;
+}
+.action-content .action-img
+{
+	
+	max-width: 20%;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+.action-content .action-img img
+{
+	max-width: 100%;
+}
+
+.detail-content
+{
+	padding-top: 50px;
+	
+}
+.detail-list
+{
+	display: flex;
+	margin-top: 7rem;
+	flex-direction: column;
+	justify-content: center;
+}
+.detail-content .detail-img
+{
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.detail-content .detail-img img
+{
+	max-width: 100%;
+}
+.detail-item
+{
+	display: flex;
+    padding-bottom: 2rem;
+}
+.detail-item p
+{
+	padding-left: 8px;
+	font-size: 1.4rem;
+	color: #104E4A;
+	font-family: 'hero-light';
+	text-align: left;
+}
+@media screen and (max-width: 1199px) {
+	.detail-list
+	{
+		margin: 0;
+	}
+}
