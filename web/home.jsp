@@ -40,7 +40,7 @@
     <body>
         <nav class="navbar navbar-expand-md mb-4 fixed-top" style="padding-left: 2em; padding-right: 2em; position: fixed;">
             <div class="container-fluid">
-                <a href="home.html" class="nav-brand" style="width: 126px;"><img class="navbar-brand" src="./asset/healthier (1) (1).png" alt=""
+                <a href="home.jsp" class="nav-brand" style="width: 126px;"><img class="navbar-brand" src="./asset/healthier (1) (1).png" alt=""
                                                                                  style="
                                                                                  width: 100%; height: auto;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -57,7 +57,7 @@
                                href="overview">Overview</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #4b5563" href="#">Exercises</a>
+                            <a class="nav-link" style="color: #4b5563" href="exercise.jsp">Exercises</a>
                         </li>
                         <li class="nav-item">
                             <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
