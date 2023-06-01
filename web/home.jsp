@@ -37,12 +37,316 @@
         <title>Healthier</title>
     </head>
 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@200&family=Spectral:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+        body {
+            box-sizing: border-box;
+            color: #000000;
+        }
+
+        .image {
+            background: rgba(0, 0, 0, 0.1) url("./asset/4920288.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            width: 100%;
+            height: auto;
+        }
+
+
+
+
+        .scroll-img {
+            position: absolute;
+            bottom: 3%;
+            left: 50%;
+        }
+
+        .other {
+            background: #fff;
+            width: 100%;
+            height: auto;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+            z-index: 101;
+        }
+
+
+        .introduce-section {
+            padding: 5em 0;
+        }
+
+        .introduce-section {
+            font-family: 'Spectral', serif;
+        }
+
+        .introduce-section .introduce-title {
+
+            font-size: 4em;
+            color: #004d49;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .welcome-text {
+            font-size: 1.5em;
+            color: #004d49;
+            margin-top: 2em;
+            font-weight: 200;
+            color: #004d49;
+            line-height: 1.4;
+        }
+
+        .introduce-section .rotate-title-list {
+            border: 0 solid white;
+            height: 70px;
+            line-height: 70px;
+            color: #068466;
+            font-size: 50px;
+            margin-top: 16px;
+            overflow: hidden;
+            margin-left: 0px;
+        }
+
+        .introduce-section .rotate-title-list span {
+            position: relative;
+            animation: rotate 7s ease infinite;
+        }
+        .introduce-section > p {
+            font-family: 'inter';
+            color: #4b5563;
+            font-weight: 400;
+            font-size: 1.3em;
+        }
+        @keyframes rotate {
+
+            0%,
+            22%,
+            100% {
+                top: 0;
+            }
+
+            28%,
+            40% {
+                top: -70px;
+            }
+
+            46%,
+            68% {
+                top: -140px;
+            }
+
+            74%,
+            96% {
+                top: -70px;
+            }
+
+        }
+
+        video {
+            width: 100%;
+            margin-top: 30px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /*  */
+        .footer {
+            background-image: linear-gradient(to right top, #66d271, #5cd276, #52d37b, #46d381, #38d386);
+            margin-top: 6em;
+            padding: 2em 2em;
+            /* min-width: 456px; */
+            max-width: 60%;
+            border-radius: 30px;
+        }
+
+        .footer>h2 {
+            font-family: 'inter';
+            font-size: 20px;
+            line-height: 1.2em;
+            font-weight: 700;
+            font-size: 5vh;
+            color: white;
+
+        }
+
+        @font-face {
+            font-family: 'hero-light';
+            src: url('/font/Hero_Light/Hero_Light.otf');
+        }
+
+        .footer>div>button {
+            font-family: 'hero-light';
+            font-size: 4vh;
+            background-color: #abcc76;
+            font-weight: 600;
+            padding: 0.3em 1.5em;
+        }
+
+        .footer>div>button:hover {
+            background-color: #abcc76;
+        }
+
+        .pushin-layer>h2 {
+            color: white;
+            font-size: 8vh;
+            font-family: 'Inter', sans-serif;
+            /* background-image: linear-gradient(to right,var(--tw-gradient-stops));
+        --tw-gradient-from: #71d16c;
+        --tw-gradient-to: rgba(113,209,108,0);
+        --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+        --tw-gradient-to: #0ea5e9;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; */
+        }
+
+
+        .row>h4 {
+            font-family: 'Poppins';
+            font-size: 5vh;
+            margin-bottom: 1em;
+            --tw-text-opacity: 1;
+            color: rgb(113 209 108/var(--tw-text-opacity));
+        }
+
+        .other {
+            background: url('./asset/background_blur.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .signin-btn {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            --tw-gradient-from: #71d16c;
+            --tw-gradient-to: rgba(113, 209, 108, 0);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            --tw-gradient-to: #27d38e;
+            --tw-text-opacity: 1;
+            height: 40px;
+            padding: 0 24px;
+            font-family: 'intern';
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 24px;
+            margin: auto 0;
+            position: relative;
+            min-width: 135px;
+            border-radius: 50px;
+            font-family: 'inter';
+        }
+
+        .signin-btn:active {
+            color: #27d38e;
+        }
+
+        .start-btn{
+            height: 40px;
+            padding: 0 24px;
+            font-family: 'inter';
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            margin: auto 0;
+            position: relative;
+            min-width: 117px;
+            border-radius: 9999px;
+            font-family: 'inter';
+            margin: 0 auto;
+        }
+        .signin-btn > p {
+            margin: auto 0;
+        }
+        .start-btn > p {
+            margin: auto auto;
+        }
+        .nav-link{
+            font-size: 2.7vh;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right,var(--tw-gradient-stops));
+            --tw-gradient-from: #71d16c;
+            --tw-gradient-to: rgba(113,209,108,0);
+            --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+            --tw-gradient-to: #0ea5e9;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+        }
+        .navbar{
+            font-family: 'inter';
+            color: #4b5563 !important;
+            font-weight: 500;
+
+        }
+        .navbar > button {
+        }
+        .details{
+            font-family: 'inter';
+            font-weight: 400;
+            color: #4b5563;
+            line-height: 28px;
+        }
+
+        #basicAccordion{
+            margin: 4em auto;
+            padding: 2em 1em;
+            width: 70%;
+            /* min-width: 500px; */
+        }
+
+        #basicAccordion > p{
+            color: #71d16c;
+            font-family: 'inter';
+            font-weight: 600;
+        }
+
+        #basicAccordion > h1{
+            color: #4b5563;
+            font-family: 'inter';
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+        .accordion-item > h2{
+            color: #2d3e4d;
+            font-family: 'inter';
+            font-weight: 500;
+            padding: 0.5em;
+        }
+        .accordion-body{
+            color: #4b5563;
+            font-family: 'inter';
+            font-weight: 400;
+        }
+
+    </style>
+
     <body>
+        <%
+            response.setHeader("Cache-Control", "no-cache"); //HTTP 1.1
+            response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+            response.setDateHeader("Expires", 0);
+//prevents caching at the proxy server
+        %>
         <nav class="navbar navbar-expand-md mb-4 fixed-top" style="padding-left: 2em; padding-right: 2em; position: fixed;">
             <div class="container-fluid">
                 <a href="home.jsp" class="nav-brand" style="width: 126px;"><img class="navbar-brand" src="./asset/healthier (1) (1).png" alt=""
-                                                                                 style="
-                                                                                 width: 100%; height: auto;"></a>
+                                                                                style="
+                                                                                width: 100%; height: auto;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -98,7 +402,7 @@
         </nav>
         <!-- Navbar -->
         <div class="container">
-            <div class="pushin" style="height: 2500px; position: relative;">
+            <div class="pushin" style="height: 2000px; position: relative;">
                 <div class="pushin-layer text-center">
                     <img style="width: 40%; height: auto;" src="./asset/Untitled design.png" alt="">
                 </div>
@@ -183,7 +487,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
+                        <div class="row" style="margin-bottom: 3em;">
                             <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: auto; margin-bottom: auto;">
                                 <p style="color: #71d16c; font-weight: 600; font-size: 1.3em;">Anatomic body</p>
                                 <p style="color: #4b5563; font-size: 1.2em; font-weight: 400; line-height: 1.9em; ">
@@ -201,7 +505,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top: 3em;">
+                        <div class="row" style="">
                             <div class="col-lg-6 col-sm-12 col-md-6">
                                 <div class="text-center"><img src="./asset/tracking.png" alt=""
                                                               style="width: 80%; height: auto; margin: 0 auto;">
@@ -234,8 +538,7 @@
                             <h2 style="margin: 0 0; align-items: center; text-align: left;
                                 max-width: 5em; font-size: 9vh;
                                 color: #004d49;
-                                " class="text-gradient">We are here to support you
-                                every step of the way.
+                                " class="text-gradient">What's new?
                             </h2>
                             <div style="font-size: 1.1em; margin-top: 2em;">
                                 <div style="text-align: justify ;display: flex; align-items: start; gap: 12px;">

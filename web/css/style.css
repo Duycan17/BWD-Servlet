@@ -175,7 +175,7 @@ video {
 .row>h4 {
 	font-family: 'Poppins';
 	font-size: 5vh;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	--tw-text-opacity: 1;
     color: rgb(113 209 108/var(--tw-text-opacity));
 }
