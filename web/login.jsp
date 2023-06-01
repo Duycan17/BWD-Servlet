@@ -102,7 +102,7 @@
                                      background-attachment: fixed;
                                      background-size: 100% 100%">
                                     <div class="card-body p-4 p-lg-5 text-black">
-                                        <form id="reg_form">
+                                        <form id="reg_form" method="post" action="login">
                                             <div class="d-flex align-items-center mb-3 pb-1">
                                                 <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                                                 <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
@@ -117,15 +117,23 @@
                                             </div>
                                             <div class="form-outline mb-3">
                                                 <label class="form-label password-label" for="form2Example27" >Password</label>
-                                                <input type="password" id="form_pwd" class="form-control" />
+                                                <input type="password" id="form_pwd" class="form-control" name="password" />
                                                 <span class="signup-error" id="errorpass">Password must contain at least 6 chars</span>
                                                 <a class="small text-muted " id="forgot-pw-link" href="#!">Forgot password?</a>
                                             </div>
                                             <div class="pt-1 mb-3">
-                                                <button class=" btn btn-gradient btn-lg btn-block" type="button">Login</button>
+                                                <button class=" btn btn-gradient btn-lg btn-block" type="submit">Login</button>
                                             </div>
                                             <a href="#!" class="small text-muted">Terms of use.</a>
                                             <a href="#!" class="small text-muted">Privacy policy</a>
+                                            <% String error = request.getParameter("error"); %>
+                                            <!-- form inputs omitted for brevity -->
+                                            <% if (error != null && error.equals("1")) { %>
+                                            <div class="alert alert-danger" style="margin-top:2em;" role="alert">
+                                                Invalid email or password. Please try again.
+                                            </div>
+                                            <% }%>
+                                            <!-- submit button omitted for brevity -->
                                         </form>
 
                                     </div>

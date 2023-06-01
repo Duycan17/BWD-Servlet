@@ -54,7 +54,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" aria-current="page"
-                               href="/overview.html">Overview</a>
+                               href="overview">Overview</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" href="#">Exercises</a>
@@ -77,11 +77,23 @@
                         </li>
 
                     </ul>
+                    <% if (session != null && session.getAttribute("email") != null) {%>
+                    <p>
+                    <form action="logout">
+                        <button class="btn-primary border-0 signin-btn">
+                            <p href="">Log out</p>
+                        </button></p>
+                    </form>
+
+                    <% } else { %>
                     <form action="login.jsp">
                         <button class="btn-primary border-0 signin-btn">
                             <p href="">Get started</p>
                         </button>
                     </form>
+                    <% }%>
+
+
                 </div>
         </nav>
         <!-- Navbar -->
@@ -327,12 +339,22 @@
             <!-- let start -->
             <section class="" style="">
                 <div class="footer" style="margin-left: auto; margin-right: auto;">
-                    <h2 style="" class="text-center">What are you waiting for without experiencing Healthier</h2>
-                    <form action="login.html" style="margin-top: 3em" class="text-center">
+                    <h2 style="max-width: 80%; margin: 0 auto; font-size:4.5vh;" class="text-center">What are you waiting for without experiencing Healthier</h2>
+                    <% if (session != null && session.getAttribute("email") != null) {%>
+                    <form action="overview.jsp" style="margin-top: 3em" class="text-center">
                         <button class="start-btn  border-0" style="background-color: #ffffff !important;">
                             <p href="" style="color: #43D68E">Get started</p>
                         </button>
                     </form>
+
+                    <% } else { %>
+                    <form action="login.jsp" style="margin-top: 3em" class="text-center">
+                        <button class="start-btn  border-0" style="background-color: #ffffff !important;">
+                            <p href="" style="color: #43D68E">Get started</p>
+                        </button>
+                    </form>
+                    <% }%>
+
                 </div>
             </section>
 

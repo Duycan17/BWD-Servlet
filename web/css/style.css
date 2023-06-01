@@ -10,7 +10,7 @@ body {
 }
 
 .image {
-	background: rgba(0, 0, 0, 0.1) url("./asset/4920288.svg");
+	background: rgba(0, 0, 0, 0.1) url("../asset/4920288.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-blend-mode: darken;
@@ -181,7 +181,7 @@ video {
 }
 
 .other {
-	background: url('./asset/background_blur.png');
+	background: url('../asset/background_blur.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
