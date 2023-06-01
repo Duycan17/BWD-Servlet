@@ -10,13 +10,16 @@ body {
 }
 
 .image {
-	background: rgba(0, 0, 0, 0.1) url("../asset/4920288.svg");
+	background: rgba(0, 0, 0, 0.1) url("./asset/4920288.svg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-blend-mode: darken;
 	width: 100%;
 	height: auto;
 }
+
+
+
 
 .scroll-img {
 	position: absolute;
@@ -123,7 +126,7 @@ video {
 	margin-top: 6em;
 	padding: 2em 2em;
 	/* min-width: 456px; */
-	max-width: 50%;
+	max-width: 60%;
 	border-radius: 30px;
 }
 
@@ -139,7 +142,7 @@ video {
 
 @font-face {
 	font-family: 'hero-light';
-	src: url('../font/Hero_Light/Hero_Light.otf');
+	src: url('/font/Hero_Light/Hero_Light.otf');
 }
 
 .footer>div>button {
@@ -178,7 +181,7 @@ video {
 }
 
 .other {
-	background: url('../asset/background_blur.png');
+	background: url('./asset/background_blur.png');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
