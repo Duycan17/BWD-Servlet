@@ -44,8 +44,8 @@
         <nav class="navbar navbar-expand-md mb-4 fixed-top" style="padding-left: 2em; padding-right: 2em; position: fixed;">
             <div class="container-fluid">
                 <a href="home.jsp" class="nav-brand" style="width: 126px;"><img class="navbar-brand"
-                                                                                 src="./asset/healthier (1) (1).png" alt="" style="
-                                                                                 width: 100%; height: auto;"></a>
+                                                                                src="./asset/healthier (1) (1).png" alt="" style="
+                                                                                width: 100%; height: auto;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0" style="margin: 0 auto ">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #4b5563" href="#">Home</a>
+                            <a class="nav-link" style="color: #4b5563" href="home.jsp">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" aria-current="page"
@@ -65,19 +65,19 @@
                         <li class="nav-item">
                             <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
-                                Languages
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Vietnamese
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">English
-                                    </a></li>
-                            </ul>
-                        </li>
+                        <!--                        <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                       data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
+                                                        Languages
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#">Vietnamese
+                                                            </a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">English
+                                                            </a></li>
+                                                    </ul>
+                                                </li>-->
 
                     </ul>
                     <% if (session != null && session.getAttribute("email") != null) {%>
@@ -344,12 +344,12 @@
 
                         <!-- Test -->
                         <!-- Test card  -->
-                        <div class="card" style="margin-top: 2em">
+                        <div class="card" style="margin-top: " style="">
                             <div class="circle"></div>
                             <div class="circle"></div>
                             <div class="card-inner">
                                 <div class="workout-section"
-                                     style="width: 80%; height: auto; margin: auto; margin-top: 2em;">
+                                     style="width: 70%; height: auto; margin: auto; margin-top: 2em;">
                                     <div class="workout-name" style="text-align: center;">
                                         <div class="name" style="text-transform: uppercase;" style="display:none;">ABC</div>
 
@@ -434,15 +434,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div
+        <style>
+
+        </style>
 
         <div id="toast">
             <div id="img"></div>
             <div id="desc" style="height: 100%; "><p style="  display: flex;
                                                      justify-content: center;
-                                                     align-items: center;"> Wait a minutes...</p></div>
+                                                     align-items: center;"> Loading...</p></div>
         </div>
-
         <script>
             function launch_toast() {
                 var x = document.getElementById("toast")

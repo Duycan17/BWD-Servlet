@@ -354,7 +354,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0" style="margin: 0 auto ">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #4b5563" href="#">Home</a>
+                            <a class="nav-link" style="color: #4b5563" href="home.jsp">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" aria-current="page"
@@ -366,7 +366,7 @@
                         <li class="nav-item">
                             <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
                         </li>
-                        <li class="nav-item dropdown">
+<!--                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
                                 Languages
@@ -378,7 +378,7 @@
                                 <li><a class="dropdown-item" href="#">English
                                     </a></li>
                             </ul>
-                        </li>
+                        </li>-->
 
                     </ul>
                     <% if (session != null && session.getAttribute("email") != null) {%>
@@ -759,7 +759,7 @@
 
         </div>
 
-        <a id="back-to-top" href="#" class=" btn btn-dark btn-lg back-to-top" role="button"><i
+        <a id="back-to-top" href="#" class=" btn-dark btn-lg back-to-top" role="button" style="font-size: 1.5em;"><i
                 class="fas fa-chevron-up"></i></a>
         <!-- script -->
         <!-- MDB -->

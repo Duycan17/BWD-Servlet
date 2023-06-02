@@ -41,6 +41,11 @@
         }
         .body-mass-index{
             background: url("./asset/background_sleep.jpg");
+            -webkit-backdrop-filter: sepia(100%);
+            backdrop-filter: sepia(100%);
+        }
+        .nav-link{
+            font-size: 2.7vh;
         }
     </style>
 
@@ -62,7 +67,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0" style="margin: 0 auto ">
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #4b5563" href="#">Home</a>
+                            <a class="nav-link" style="color: #4b5563" href="home.jsp">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" aria-current="page"
@@ -74,19 +79,19 @@
                         <li class="nav-item">
                             <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
-                                Languages
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Vietnamese
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">English
-                                    </a></li>
-                            </ul>
-                        </li>
+                        <!--                        <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                       data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
+                                                        Languages
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#">Vietnamese
+                                                            </a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">English
+                                                            </a></li>
+                                                    </ul>
+                                                </li>-->
 
                     </ul>
                     <% if (session != null && session.getAttribute("email") != null) {%>
@@ -244,13 +249,13 @@
 
                         </div>
                         <div class="body-detail">
-                            <h2><%=statusBMI%></h2>
+                            <h2 style="color: #EF4444;"><%=statusBMI%></h2>
                         </div>
                     </div>
 
-                    <div class="right-video glass">
-                        <div class="video-detail">
-                            <video src="/asset/y2mate.com - Incline Dumbbell Curl_1080p.mp4"></video>
+                    <div class="right-video glass" style="width: 474; height:150">
+                        <div class="video-detail" style="width:100%; height:100%;">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hmFQqjMF_f0" title="How playing sports benefits your body ... and your brain - Leah Lagos and Jaspal Ricky Singh" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
