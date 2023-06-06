@@ -40,7 +40,7 @@
             font-family:'poppins';
         }
         .body-mass-index{
-            background: url("./asset/background_sleep.jpg");
+            background: url("./asset/sleep3.jpg");
             -webkit-backdrop-filter: sepia(100%);
             backdrop-filter: sepia(100%);
         }
@@ -200,13 +200,13 @@
                     <div class="slider">
                         <div id="carouselExampleFade" class="carousel slide carousel-fade">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
+<!--                                <div class="carousel-item active">
                                     <img src="./asset/exercise_img.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
+                                </div>-->
+<!--                                <div class="carousel-item">
                                     <img src="./asset/backgroundimg.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
+                                </div>-->
+                                <div class="carousel-item active">
                                     <img src="./asset/4920290.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>

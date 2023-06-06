@@ -38,6 +38,17 @@
             background-attachment: fixed;
             background-size: 100% 100%;
         }
+        @media screen and (max-width: 768px) {
+            button{
+                margin-top: 1.5em;
+            }
+            .workout-section{
+                width:90%;
+            }
+            .center-block{
+                display: none;
+            }
+        }
     </style>
 
     <body>
@@ -443,7 +454,7 @@
             <div id="img"></div>
             <div id="desc" style="height: 100%; "><p style="  display: flex;
                                                      justify-content: center;
-                                                     align-items: center;"> Loading...</p></div>
+                                                     align-items: center; padding-top:10px;"> Loading...</p></div>
         </div>
         <script>
             function launch_toast() {

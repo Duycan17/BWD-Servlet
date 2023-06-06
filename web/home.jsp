@@ -482,8 +482,7 @@
                                 <p
                                     style="margin-top:2em; color: #4b5563; font-size: 1.2em; font-weight: 400; line-height: 1.9em;">
                                     🏆 We provide exercise demonstrations, workout plans and programs, challenges, and
-                                    community support to keep you motivated and engaged. Explore our website today and take
-                                    charge of your fitness journey.</p>
+                                    community support to keep you motivated and engaged.</p>
                                 </p>
                             </div>
                         </div>
@@ -495,8 +494,7 @@
                                 <p
                                     style="margin-top:2em; color: #4b5563; font-size: 1.2em; font-weight: 400; line-height: 1.9em;">
                                     ✨ With the ability to navigate through layers, zoom, and rotate, you can gain a deeper
-                                    understanding of the body's structures and functions. Start exploring the human body in
-                                    3D today with our anatomic tool.</p>
+                                    understanding of the body's structures and functions. </p>
                                 </p>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-md-6">
@@ -518,8 +516,7 @@
                                 <p
                                     style="margin-top:2em; color: #4b5563; font-size: 1.2em; font-weight: 400; line-height: 1.9em;">
                                     🪄 Log and monitor various aspects of your health, access expert advice, and connect
-                                    with a community of like-minded individuals. Sign up today to take control of your
-                                    health!</p>
+                                    with a community of like-minded individuals.</p>
                                 </p>
                             </div>
                         </div>
@@ -636,6 +633,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
