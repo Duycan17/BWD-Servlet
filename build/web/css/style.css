@@ -18,6 +18,9 @@ body {
 	height: auto;
 }
 
+
+
+
 .scroll-img {
 	position: absolute;
 	bottom: 3%;
@@ -123,7 +126,7 @@ video {
 	margin-top: 6em;
 	padding: 2em 2em;
 	/* min-width: 456px; */
-	max-width: 50%;
+	max-width: 60%;
 	border-radius: 30px;
 }
 
@@ -139,7 +142,7 @@ video {
 
 @font-face {
 	font-family: 'hero-light';
-	src: url('../font/Hero_Light/Hero_Light.otf');
+	src: url('/font/Hero_Light/Hero_Light.otf');
 }
 
 .footer>div>button {
@@ -172,7 +175,7 @@ video {
 .row>h4 {
 	font-family: 'Poppins';
 	font-size: 5vh;
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	--tw-text-opacity: 1;
     color: rgb(113 209 108/var(--tw-text-opacity));
 }

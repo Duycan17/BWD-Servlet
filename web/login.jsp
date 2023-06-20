@@ -87,6 +87,14 @@
         }
     </style>
     <body>
+        <%
+            if (session != null && session.getAttribute("email") != null) {
+                response.sendRedirect("home.jsp");
+            } else {
+        %>
+        <%
+            }
+        %>
         <section class="grainy-gradient-intro vh-120" >
             <div class="container py-5 h-100" >
                 <div class="row d-flex justify-content-center align-items-center h-100" >

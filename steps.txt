@@ -1,0 +1,4 @@
+Number of steps: 1782
+Fat Burned: 6
+Calories: 40
+Distance travelled in meters: 1324

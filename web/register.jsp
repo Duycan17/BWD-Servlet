@@ -1,9 +1,3 @@
-<%-- 
-    Document   : register
-    Created on : May 30, 2023, 10:45:24 PM
-    Author     : duy
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +14,179 @@
         <link rel="stylesheet" href="css/animate.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link href="./css/register.css" rel="stylesheet">
+
     </head>
 
+    <style>
+        /*theme*/
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+        :root {
+            --btn-color :#277e6f;
+            --second-color:#2d6996;
+        }
+        body {
+
+            font-family: 'poppins';
+        }
+
+        /*theme*/
+
+
+        /*form*/
+        .register-form {
+            border-radius: 20px;
+        }
+
+        .register-form-inactive {
+            display: none;
+        }
+        .register-form-active{
+            display: block ;
+        }
+        /*form*/
+
+        /*password and confirm password*/
+        .pass {
+            width: 48%;
+            display: inline-block;
+        }
+        /*password and confirm password*/
+
+        /*process*/
+        .steps {
+            margin-block: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            counter-reset: step; /*create a count value variable named step*/
+
+        }
+
+        .steps::before, .step-transform {
+            z-index: 1;
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 100%;
+            background-color: lightgray;
+        }
+
+        #step-transform {
+            background-color: var(--btn-color);
+            width: 0%;
+        }
+
+        .step {
+            z-index: 2;
+            width: 2.5em;
+            height: 2.5em;
+            border-radius: 50%;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step::before {
+            counter-increment: step; /*increasing the value of step variable*/ /*the first value is 0*/
+            content: counter(step); /*passing the value of variable step into content of the .step*/
+        }
+
+        .step-active {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            --tw-gradient-from: #71d16c;
+            --tw-gradient-to: rgba(113, 209, 108, 0);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            --tw-gradient-to: #27d38e;
+            --tw-text-opacity: 1;
+            color: white;
+        }
+        /*process*/
+
+
+        /*button*/
+        .button-groups {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-groups button{
+            border: none;
+            font-weight: 600;
+            width: 48%;
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            --tw-gradient-from: #71d16c;
+            --tw-gradient-to: rgba(113, 209, 108, 0);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            --tw-gradient-to: #27d38e;
+            --tw-text-opacity: 1;
+            color: #ffffff;
+
+        }
+
+        .button-groups button:hover {
+            color: var(--btn-color);
+        }
+
+
+
+
+        /*button*/
+
+        .logo-img {
+            display: none;
+        }
+
+        .required-alert {
+            color: rgb(188, 4, 4);
+            font-size: 0.9em;
+            visibility: hidden;
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 450px) {
+            * {
+                box-sizing: border-box;
+            }
+
+            html, body{
+                padding: 0em !important;
+
+            }
+
+            .register-form {
+                margin-left: 0;
+                width: 70vw;
+                padding: 13px;
+                font-size: 1em;
+            }
+
+            input {
+                font-size: 0.9em;
+            }
+            .logo-img {
+                display: block;
+            }
+
+            .button-groups {
+                display: block;
+            }
+
+            .button-groups button{
+                margin-block: 3px;
+                font-size: 0.9em;
+                width: 100%;
+            }
+
+            .step {
+                width: 2em;
+                height: 2em;
+            }
+        }
+
+
+    </style>
     <body>
 
         <!-- another one -->
@@ -35,8 +200,8 @@
                     <div class="col col-xl-10" style="">
                         <div class="card" style="border-radius: 1rem 1rem 1rem 1rem;">
                             <div class="row g-0 " style="border-radius: 1rem 0 0 1rem;">
-                                <div class="col-md-6 col-lg-7 d-flex">
-                                    <div class="grainy-gradient-intro  card-body p-4 p-lg-5 text-black" style=" background: url(./asset/background_blur.png);
+                                <div class="col-md-6 col-lg-7">
+                                    <div class="grainy-gradient-intro  card-body p-4  p-lg-3 text-black" style=" background: url(./asset/background_blur.png);
                                          background-repeat: no-repeat;
                                          background-attachment: fixed;
                                          background-size: 100% 100%">
@@ -47,7 +212,7 @@
                                         </svg>
                                         <div class="d-flex align-items-center mb-1 pb-1" >
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;" ></i>
-                                            <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
+                                     <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
                                         </div>
 
                                         <div class="register-form"
@@ -75,11 +240,15 @@
                                                                    required>
                                                             <p class="required-alert">You have to fill this field!</p>
                                                         </div>
-                                                        <div class="mb-0">
-                                                            <label for="input-value-2" class="form-label">Password</label>
-                                                            <input type="password" class="form-control" id="input-value-2" name="password">
-                                                            <p class="required-alert">You have to fill this field!</p>
-
+                                                        <div style="display: flex;justify-content: space-between;">
+                                                            <div class="mb-0 pass">
+                                                                <label for="input-value-2" class="form-label">Password</label>
+                                                                <input type="password" class="form-control" id="input-value-2" name="password">
+                                                            </div>    
+                                                            <div class="mb-0 pass">   
+                                                                <label for="input-value-2.5" class="form-label"> Confirm Password</label>
+                                                                <input type="password" class="form-control" id="input-value-2.5" name="password">
+                                                            </div>
                                                         </div>
                                                         <div class="button-groups">
                                                             <div style="width: 50%; background-color: transparent;"></div>
@@ -162,9 +331,8 @@
 
                                 </div>
                                 <div class="col-md-6 col-lg-5 d-none d-md-block" style="margin: 0; padding: 0;">
-                                    <video src="./asset/video_register.mp4" alt="register form" class="img-fluid"
-                                           style="border-radius: 0 1rem 1rem 0; width: 100%; height: 100%; margin: 0;" autoplay loop>
-                                    </video>
+                                     <img src="./asset/pexels-pixabay-255469.jpg "
+                                         alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; object-fit: cover; height: 100%;" />
                                 </div>
                             </div>
                         </div>
@@ -177,4 +345,4 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </body>
 
-</html>
+</html

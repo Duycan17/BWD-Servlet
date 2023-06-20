@@ -4,6 +4,7 @@
     Author     : duy
 --%>
 
+<%@page import="Controller.MiBand4Automation"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -366,19 +367,19 @@
                         <li class="nav-item">
                             <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
                         </li>
-<!--                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
-                                Languages
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Vietnamese
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">English
-                                    </a></li>
-                            </ul>
-                        </li>-->
+                        <!--                        <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                       data-bs-toggle="dropdown" aria-expanded="false" style="color: #4b5563;">
+                                                        Languages
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#">Vietnamese
+                                                            </a>
+                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">English
+                                                            </a></li>
+                                                    </ul>
+                                                </li>-->
 
                     </ul>
                     <% if (session != null && session.getAttribute("email") != null) {%>
@@ -440,7 +441,7 @@
             </div>
             <!-- Done intro -->
             <div>
-                <div class="container service" style="margin-top:3em">
+                <div class="container service" style="margin-">
                     <div class="row" style="font-family: 'inter', serif;">
                         <h4 class="text-center">Our services</h4>
                         <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xl-4">
@@ -468,7 +469,7 @@
                                     body part need.</p>
                             </div>
                         </div> -->
-                        <div class="row" style="margin-bottom: 3em;">
+                        <div class="row" style="margin-bottom: 1em;">
                             <div class="col-lg-6 col-sm-12 col-md-6">
                                 <div class="text-center"><img src="./asset/—Pngtree—sport crunches illustration_4678510.png"
                                                               alt="" style="width: 80%; height: auto; margin: 0 auto;">
@@ -486,7 +487,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="row" style="margin-bottom: 3em;">
+                        <div class="row" style="margin-bottom: 1em;">
                             <div class="col-lg-6 col-md-6 col-sm-12" style="margin-top: auto; margin-bottom: auto;">
                                 <p style="color: #71d16c; font-weight: 600; font-size: 1.3em;">Anatomic body</p>
                                 <p style="color: #4b5563; font-size: 1.2em; font-weight: 400; line-height: 1.9em; ">
@@ -529,7 +530,7 @@
 
             <!--  -->
             <div>
-                <div class="container service" style="font-family: 'Poppins'; margin-top: 8em;">
+                <div class="container service" style="font-family: 'Poppins'; margin-top: 3em;">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <h2 style="margin: 0 0; align-items: center; text-align: left;
@@ -563,7 +564,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 text-center">
-                            <img src="./asset/cayhoa.jpg" alt="" style="width: 85%; height: auto;">
+                            <img src="./asset/cayhoa.jpg" alt="" class="img-fluid" style="width: 85%; height: 80%;">
                         </div>
                     </div>
 
@@ -633,7 +634,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -780,6 +781,12 @@
                 prefix: "tw-"
             }
         </script>
+        <%@ page import="Controller.MiBand4Service" %>
+
+        ...
+        <%
+//            MiBand4Service.startAutomation();
+        %>
     </body>
 
 </html>

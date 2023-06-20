@@ -31,7 +31,6 @@ next.forEach((btn) => {
                 } else {
                     alertMess[inputNum-1].style.visibility = 'visible';
                     alertMess[inputNum-1].innerHTML= 'Wrong syntax of email!';
-                
                 }
             } else {
                 run();

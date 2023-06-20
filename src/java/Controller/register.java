@@ -19,6 +19,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
+import java.sql.SQLException;
 
 /**
  *
@@ -97,16 +99,28 @@ public class register extends HttpServlet {
         User user = new User();
         user.setUserName(name);
         user.setEmail(email);
-        user.setPassword(password);
+        try {
+            user.setPassword(encryptPassword.encryptPassword(password));
+        } catch (Exception ex) {
+            Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
+        }
         user.setBirthDay(sqlDate);
         user.setWeight(weight);
         user.setHeight(height);
 
         UserDAO userDao = new UserDAO();
-        userDao.addUser(user);
+        boolean isAdded = userDao.addUser(user);
+        if (isAdded) {
+            String successMessage = "User registered successfully!";
+            String encodedMessage = URLEncoder.encode(successMessage, "UTF-8");
+            response.sendRedirect("register.jsp?successMessage=" + encodedMessage);
 
-        // Redirect to a success page
-        response.sendRedirect("success.html");
+        } else {
+            String errorMessage = "Email already exists!";
+            String encodedMessage = URLEncoder.encode(errorMessage, "UTF-8");
+            response.sendRedirect("register.jsp?errorMessage=" + encodedMessage);
+        }
+
     }
 
     /**
