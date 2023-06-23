@@ -359,13 +359,13 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" style="color: #4b5563" aria-current="page"
-                               href="overview">Overview</a>
+                               href="Dashboard-Healthier/pages/dashboard.jsp">Overview</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" style="color: #4b5563" href="exercise.jsp">Exercises</a>
+                            <a class="nav-link" style="color: #4b5563" href="Dashboard-Healthier/pages/exercise.jsp">Exercises</a>
                         </li>
                         <li class="nav-item">
-                            <a href="explore.html" class="nav-link" style="color: #4b5563;">Explore</a>
+                            <a href="Dashboard-Healthier/pages/explore.jsp" class="nav-link" style="color: #4b5563;">Explore</a>
                         </li>
                         <!--                        <li class="nav-item dropdown">
                                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -785,7 +785,7 @@
 
         ...
         <%
-//            MiBand4Service.startAutomation();
+            MiBand4Service.startAutomation();
         %>
     </body>
 

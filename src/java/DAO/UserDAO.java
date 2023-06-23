@@ -4,6 +4,9 @@ import Controller.encryptPassword;
 import static Controller.encryptPassword.encryptPassword;
 import Model.User;
 import java.io.File;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -188,6 +191,59 @@ public class UserDAO {
             e.printStackTrace();
         }
         return users;
+    }
+
+    public User findByEmail(String email) {
+        User user = null;
+        String sql = "SELECT * FROM users INNER JOIN user_profile ON users.profile_id = user_profile.id WHERE email=?";
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                user = new User();
+                user.setId(rs.getInt("users.id"));
+                user.setUserName(rs.getString("users.userName"));
+                user.setEmail(rs.getString("users.email"));
+                user.setPassword(rs.getString("users.password"));
+                user.setBirthDay(rs.getDate("user_profile.birthDay"));
+                user.setWeight(rs.getFloat("user_profile.weight"));
+                user.setHeight(rs.getFloat("user_profile.height"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+    public boolean updatePasswordByEmail(String email, String newPassword) {
+        String sql = "UPDATE users SET password=? WHERE email=?";
+        try {
+            String hashedPassword = encryptPassword(newPassword); // Hash the new password
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, hashedPassword);
+            ps.setString(2, email);
+            int rowsUpdated = ps.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private String encryptPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(password.getBytes());
+            BigInteger no = new BigInteger(1, messageDigest);
+            String hashText = no.toString(16);
+            while (hashText.length() < 32) {
+                hashText = "0" + hashText;
+            }
+            return hashText;
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

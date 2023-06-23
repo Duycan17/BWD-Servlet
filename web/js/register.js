@@ -25,12 +25,17 @@ next.forEach((btn) => {
             }else if(inputNum==1) {
                 var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
                 var myArray = document.getElementById(n).value;
+                var confirmPass = document.getElementById("input-value-2.5");
+
                 console.log(re.test(myArray));
-                if(re.test(myArray)) {
-                    run();
-                } else {
+                if(!re.test(myArray)) {
                     alertMess[inputNum-1].style.visibility = 'visible';
                     alertMess[inputNum-1].innerHTML= 'Wrong syntax of email!';
+                } else if(confirmPass.value!=document.getElementById(m).value) {
+                    alertMess[inputNum].style.visibility = 'visible';
+                    alertMess[inputNum].innerHTML= 'Re-confirm the password!';
+                } else {
+                    run();
                 }
             } else {
                 run();
@@ -42,7 +47,7 @@ next.forEach((btn) => {
 prev.forEach((btn) => {
     btn.addEventListener("click", () => {
         formStepNum--;
-        stepTransPercent -= 33;
+        stepTransPercent -= 50;
         updateFormStep();
         updateCircleStep();
         inputNum -= 2;
@@ -68,7 +73,7 @@ function updateCircleStep () {
 
   function run (){
     formStepNum++;
-    stepTransPercent += 33;
+    stepTransPercent += 50;
     alertMess[inputNum-1].style.visibility= 'hidden';
     alertMess[inputNum].style.visibility= 'hidden';
     updateFormStep();

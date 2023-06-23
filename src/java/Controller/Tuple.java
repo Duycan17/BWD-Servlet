@@ -20,4 +20,21 @@ public class Tuple<A, B, C, D> {
         this.third = third;
         this.fourth = fourth;
     }
+
+    public A getFirst() {
+        return first;
+    }
+
+    public B getSecond() {
+        return second;
+    }
+
+    public C getThird() {
+        return third;
+    }
+
+    public D getFourth() {
+        return fourth;
+    }
+    
 }

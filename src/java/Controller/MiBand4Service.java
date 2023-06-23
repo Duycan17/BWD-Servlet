@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author duy
  */
 public class MiBand4Service {
-    public static void startAutomation() {
+    public static void startAutomation() throws InterruptedException {
         Thread m = new Thread(new Runnable() {
             @Override
             public void run() {

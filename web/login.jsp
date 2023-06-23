@@ -96,7 +96,7 @@
             }
         %>
         <section class="grainy-gradient-intro vh-120" >
-            <div class="container py-5 h-100" >
+            <div class="container h-100"  style="padding: auto; padding-top: 10vh;" >
                 <div class="row d-flex justify-content-center align-items-center h-100" >
                     <div class="col col-xl-10">
                         <div class="grainy-gradient-intro card" style="border-radius: 1rem;">
@@ -127,7 +127,7 @@
                                                 <label class="form-label password-label" for="form2Example27" >Password</label>
                                                 <input type="password" id="form_pwd" class="form-control" name="password" />
                                                 <span class="signup-error" id="errorpass">Password must contain at least 6 chars</span>
-                                                <a class="small text-muted " id="forgot-pw-link" href="#!">Forgot password?</a>
+                                                <a class="small text-muted " id="forgot-pw-link" href="forgot.jsp">Forgot password?</a>
                                             </div>
                                             <div class="pt-1 mb-3">
                                                 <button class=" btn btn-gradient btn-lg btn-block" type="submit">Login</button>

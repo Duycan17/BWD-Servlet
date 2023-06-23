@@ -1,17 +1,4 @@
-<!--
-=========================================================
-* Argon Dashboard 2 - v2.0.4
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <%-- 
     Document   : home
     Created on : May 30, 2023, 10:24:56 PM
@@ -70,7 +57,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
         aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href="#" target="_blank">
+      <a class="navbar-brand m-0" href="<%=request.getContextPath()%>/home.jsp" target="_blank">
         <img src="../assets/healthier (1) (1).png" alt="" style="border-radius: 0 !important" />
       </a>
     </div>
@@ -554,7 +541,7 @@
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <script>
+<!--  <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
@@ -647,7 +634,7 @@
         },
       },
     });
-  </script>
+  </script>-->
   <script>
     var win = navigator.platform.indexOf("Win") > -1;
     if (win && document.querySelector("#sidenav-scrollbar")) {

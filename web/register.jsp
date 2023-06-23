@@ -193,14 +193,14 @@
         <section class="vh-120 " style=" background: url(./asset/background_blur.png);
                  background-repeat: no-repeat;
                  background-attachment: fixed;
-                 background-size: cover;">
+                 background-size: cover; height: 100vh;">
 
-            <div class="grainy-gradient-intro container py-5 h-100 " >
+            <div class="grainy-gradient-intro container h-120 " style="padding: auto; padding-top: 10vh;">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col col-xl-10" style="">
                         <div class="card" style="border-radius: 1rem 1rem 1rem 1rem;">
                             <div class="row g-0 " style="border-radius: 1rem 0 0 1rem;">
-                                <div class="col-md-6 col-lg-7">
+                                <div class="col-md-6 col-lg-7 d-flex">
                                     <div class="grainy-gradient-intro  card-body p-4  p-lg-3 text-black" style=" background: url(./asset/background_blur.png);
                                          background-repeat: no-repeat;
                                          background-attachment: fixed;
@@ -210,9 +210,9 @@
                                             <feTurbulence type='fractalNoise' baseFrequency='.5' />
                                         </filter>
                                         </svg>
-                                        <div class="d-flex align-items-center mb-1 pb-1" >
+                                        <div class="d-flex align-items-center mb-3 pb-1" >
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;" ></i>
-                                     <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
+                                            <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
                                         </div>
 
                                         <div class="register-form"
@@ -253,7 +253,7 @@
                                                         <div class="button-groups">
                                                             <div style="width: 50%; background-color: transparent;"></div>
                                                             <button type="button"
-                                                                    class="btn btn-primary next-btn">Next</button>
+                                                                    class="btn btn-primary next-btn" style="margin-top: 2em;">Next</button>
                                                         </div>
                                                     </div>
 
@@ -304,34 +304,45 @@
                                                             <button type="submit" class="btn btn-primary">Submit</button>
                                                         </div>
                                                     </div>
-
-                                                    <%
-                                                        String successMessage = request.getParameter("successMessage");
-                                                        if (successMessage != null && !successMessage.isEmpty()) {
-                                                    %>
-                                                    <div style="margin-top:2em;" class="alert alert-success"><%= successMessage%></div>
-                                                    <%
-                                                        }
-                                                    %>
-                                                    <%
-                                                        String errorMessage = request.getParameter("errorMessage");
-                                                        if (errorMessage != null && !errorMessage.isEmpty()) {
-                                                    %>
-                                                    <div style="margin-top:2em;" class="alert alert-danger"><%= errorMessage%></div>
-                                                    <%
-                                                        }
-                                                    %>
+                                                    <button style="display: none;" type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+                                                    <div class="toast-container position-fixed top-0 end-0 p-3" style="display:none;">
+                                                        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                                            <div class="toast-header">
+                                                                <strong class="me-auto">Healthier</strong>
+                                                                <small></small>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                                            </div>
+                                                            <%
+                                                                String successMessage = request.getParameter("successMessage");
+                                                                if (successMessage != null && !successMessage.isEmpty()) {
+                                                            %>
+                                                            <div class="toast-body">
+                                                                <div style="margin-bottom: 0px;" class="alert alert-success"><%= successMessage%></div>
+                                                            </div>
+                                                            <%
+                                                                }
+                                                            %>
+                                                            <%
+                                                                String errorMessage = request.getParameter("errorMessage");
+                                                                if (errorMessage != null && !errorMessage.isEmpty()) {
+                                                            %>
+                                                            <div class="toast-body">
+                                                                <div style="margin-bottom: 0px;" class="alert alert-danger"><%= errorMessage%></div>
+                                                            </div>
+                                                            <%
+                                                                }
+                                                            %>
+                                                        </div>
+                                                    </div>
                                                 </form>
                                             </div>
-
                                         </div>
-
                                     </div>
                                     <%-- Check if there is a success message --%>
 
                                 </div>
                                 <div class="col-md-6 col-lg-5 d-none d-md-block" style="margin: 0; padding: 0;">
-                                     <img src="./asset/pexels-pixabay-255469.jpg "
+                                    <img src="./asset/pexels-pixabay-255469.jpg "
                                          alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; object-fit: cover; height: 100%;" />
                                 </div>
                             </div>
@@ -339,10 +350,47 @@
                     </div>
                 </div>
             </div>
-        </section>
 
+
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script src="./js/register.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+        <script>
+            const toastTrigger = document.getElementById('liveToastBtn');
+            const toastLiveExample = document.getElementById('liveToast')
+            if (toastTrigger) {
+                const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+                toastTrigger.addEventListener('click', () => {
+                    toastBootstrap.show()
+                })
+            }
+        </script>
+        <!-- Add an event listener to the window object to trigger the toast when the page loads -->
+        <!-- Add an event listener to the window object to trigger the toast if there is an error or success alert -->
+        <!-- Add an event listener to the window object to trigger the toast if there is an error or success alert -->
+        <!-- Add an event listener to the window object to trigger the toast if there is an error or success alert -->
+        <script>
+            window.addEventListener('load', function () {
+                // Get a reference to the button element
+                const button = document.getElementById('liveToastBtn');
+
+                // Check for the presence of an error or success alert
+                const successAlert = document.querySelector('.alert-success');
+                const errorAlert = document.querySelector('.alert-danger');
+
+                if (successAlert || errorAlert) {
+                    // Trigger a click event on the button element
+                    const toastContainer = document.getElementsByClassName('toast-container')[0];
+
+                    // Set the display property to "inline-block"
+                    toastContainer.style.display = 'inline-block';
+                    button.click();
+                }
+            });
+        </script>
     </body>
 
 </html
