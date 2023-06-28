@@ -38,7 +38,14 @@
         <title>Healthier</title>
     </head>
 
-
+    <style>
+        .row>h4 {
+            font-family: 'Poppins';
+            font-size: 5vh;
+            --tw-text-opacity: 1;
+            color: rgb(113 209 108/var(--tw-text-opacity));
+        }
+    </style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@200&family=Spectral:wght@400;500&display=swap');
@@ -217,7 +224,6 @@
         .row>h4 {
             font-family: 'Poppins';
             font-size: 5vh;
-            margin-bottom: 1em;
             --tw-text-opacity: 1;
             color: rgb(113 209 108/var(--tw-text-opacity));
         }
