@@ -411,7 +411,7 @@
         <div class="container">
             <div class="pushin" style="height: 2000px; position: relative;">
                 <div class="pushin-layer text-center">
-                    <img style="width: 40%; height: auto;" src="./asset/Untitled design.png" alt="">
+                    <img style="width: 40%; height: auto; color: white;" src="./asset/Untitled design.png" alt="">
                 </div>
                 <div class="pushin-layer text-center">
                     <img style="width: 50%; height: auto;" src="./asset/heading_2.png" alt="">
@@ -694,14 +694,10 @@
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     <i class="fas fa-gem me-3"></i>Healthier
                                 </h6>
+                         
+                             
                                 <p>
-                                    Vo Thi Hong Anh
-                                </p>
-                                <p>
-                                    Le Quang Phat
-                                </p>
-                                <p>
-                                    Nguyen Thuy Mai
+                                    Tran Ba Dinh Lam
                                 </p>
                                 <p>
                                     Dao Khanh Duy

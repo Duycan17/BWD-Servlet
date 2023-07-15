@@ -35,6 +35,7 @@ import org.w3c.dom.Element;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+import javax.servlet.http.Cookie;
 
 /**
  *
@@ -103,7 +104,13 @@ public class login extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("email", user.getEmail());
             response.sendRedirect("home.jsp");
-
+//            Handler remember me
+            if (request.getParameter("remember_me") != null && request.getParameter("remember_me").equals("on")) {
+                // Create a cookie with the user's email and set its maximum age to one week
+                Cookie emailCookie = new Cookie("email", email);
+                emailCookie.setMaxAge(604800); // 1 week TTL
+                response.addCookie(emailCookie);
+            }
             // Calculate user age
             Date birthDate = user.getBirthDay();
             LocalDate localBirthDate = new java.sql.Date(birthDate.getTime()).toLocalDate();

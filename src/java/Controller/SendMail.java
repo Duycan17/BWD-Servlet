@@ -20,15 +20,14 @@ public class SendMail {
 
     public static void sendEmail(String email, String newPassword) {
 
-        String senderEmail = "cunsoft.auto@gmail.com";
-        String senderPassword = "bcndlaekyuotkosg";
+        String senderEmail = "bankloverboy@gmail.com";
+        String senderPassword = "xgdjkhjlmxdrnvqb";
 
         String recipientEmail = email;
 
         String smtpHost = "smtp.gmail.com";
         String smtpPort = "587";
 
-    
         String subject = "Healthier - New password";
         String body = "Your new password is: " + newPassword;
 

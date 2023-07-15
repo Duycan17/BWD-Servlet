@@ -95,15 +95,15 @@
         <%
             }
         %>
-        <section class="grainy-gradient-intro vh-120" >
-            <div class="container h-100"  style="padding: auto; padding-top: 10vh;" >
-                <div class="row d-flex justify-content-center align-items-center h-100" >
+
+        <section class="grainy-gradient-intro vh-120">
+            <div class="container h-100" style="padding: auto; padding-top: 10vh;">
+                <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col col-xl-10">
                         <div class="grainy-gradient-intro card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                    <img src="./asset/pexels-pixabay-255469.jpg "
-                                         alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; object-fit: cover; height: 100%;" />
+                                    <img src="./asset/pexels-pixabay-255469.jpg " alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; object-fit: cover; height: 100%;" />
                                 </div>
                                 <div class="col-md-6 col-lg-7 d-flex align-items-center" style=" background: url(./asset/background_blur.png);
                                      background-repeat: no-repeat;
@@ -116,18 +116,23 @@
                                                 <a href="home.jsp" style="margin:0 auto;"> <img style="margin: 0 auto;" src="./asset/healthier (1) (1).png" alt=""></a>
                                             </div>
                                             <h5 class="fw-normal mb-2 pb- text-center" style="letter-spacing: 1px;">Sign into your account</h5>
-                                            <p class="mb-3 pb-lg-2 text-center" style="color: #393f81;">Don't have an account? <a href="register.jsp"
-                                                                                                                                  style="color: #393f81;">Register here</a></p>
+                                            <p class="mb-3 pb-lg-2 text-center" style="color: #393f81;">Don't have an account? <a href="register.jsp" style="color: #393f81;">Register here</a></p>
                                             <div class="form-outline mb-3">
                                                 <label class="form-label email-label" for="form2Example17">Email address</label>
-                                                <input type="email" name="email" id="form_email" class="form-control " />
+                                                <input type="email" name="email" id="form_email" class="form-control" value="<%= request.getParameter("email") != null ? request.getParameter("email") : ""%>" />
                                                 <span class="signup-error" id="erroremail">Invalid email format</span>
                                             </div>
                                             <div class="form-outline mb-3">
-                                                <label class="form-label password-label" for="form2Example27" >Password</label>
-                                                <input type="password" id="form_pwd" class="form-control" name="password" />
+                                                <label class="form-label password-label" for="form2Example27">Password</label>
+                                                <input type="password" id="form_pwd" class="form-control" name="password" value="<%= request.getParameter("password") != null ? request.getParameter("password") : ""%>" />
                                                 <span class="signup-error" id="errorpass">Password must contain at least 6 chars</span>
                                                 <a class="small text-muted " id="forgot-pw-link" href="forgot.jsp">Forgot password?</a>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" name="remember_me" id="remember_me" <%= request.getParameter("remember_me") != null && request.getParameter("remember_me").equals("on") ? "checked" : ""%>>
+                                                <label class="form-check-label" for="remember_me">
+                                                    Remember me
+                                                </label>
                                             </div>
                                             <div class="pt-1 mb-3">
                                                 <button class=" btn btn-gradient btn-lg btn-block" type="submit">Login</button>

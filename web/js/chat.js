@@ -1,7 +1,7 @@
 const msgPanel = document.querySelector(".msg-panel");
 const input = document.getElementById("inputC");
 const submit = document.getElementById("submit");
-const apiUrl = "http://192.168.1.10:5100/v1/chat/completions";
+const apiUrl = "http://localhost:3700/v1/chat/completions";
 const apiKey = "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";
 // add content when webpage is loaded
 
